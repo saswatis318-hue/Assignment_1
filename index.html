@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-red-200">
+    <div class="bg-white p-5 rounded-xl shadow-lg w-72">
+        <h1 class="text-center text-xl font-bold mb-3">Calculator</h1>
+
+        <!-- Display -->
+        <input 
+            type="text" 
+            id="display" 
+            class="w-full mb-3 p-2 text-right border rounded text-lg" 
+            readonly />
+
+        <!-- Buttons -->
+        <div class="grid grid-cols-4 gap-2">
+            <button data-value="C" class="btn clr-btn">AC</button>
+            <button data-value="/" class="btn clr-btn">/</button>
+            <button data-value="*" class="btn clr-btn">*</button>
+            <button data-value="-" class="btn clr-btn">-</button>
+
+            <button data-value="7" class="btn clr-btn">7</button>
+            <button data-value="8" class="btn clr-btn">8</button>
+            <button data-value="9" class="btn clr-btn">9</button>
+            <button data-value="+" class="btn clr-btn">+</button>
+
+            <button data-value="4" class="btn clr-btn">4</button>
+            <button data-value="5" class="btn clr-btn">5</button>
+            <button data-value="6" class="btn clr-btn">6</button>
+            <button data-value="=" class="btn clr-btn">=</button>
+
+            <button data-value="1" class="btn clr-btn">1</button>
+            <button data-value="2" class="btn clr-btn">2</button>
+            <button data-value="3" class="btn clr-btn">3</button>
+
+            <button data-value="0" class="btn clr-btn">0</button>
+            <button data-value="." class="btn clr-btn">.</button>
+            <!-- <button data-value="%" class="btn clr-btn">%</button> -->
+
+
+        </div>
+        <p id="lastResult" class="text-sm mt-3 text-gray-600"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+    <style>
+        .btn {
+            padding: 10px;
+            background: rgb(200, 180, 26);
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+
+        .clr-btn {
+            background-color: orange;
+        }
+
+        .btn:hover {
+            background: orangered;
+        }
+    </style>
+</body>
+
+</html>
